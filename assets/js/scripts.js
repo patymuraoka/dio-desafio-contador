@@ -1,17 +1,39 @@
-let count = 0;
+window.addEventListener('load', () => {
+    const btnAdicionar = document.getElementById("adicionar")
+    const btnSubtrair = document.getElementById("subtrair")
 
-const CURRENT_NUMBER = document.getElementById('currentNumber');
+    let currentNumberWrapper = document.getElementsByTagName("span")[0]
+    let currentNumber = 0
 
-function increment() {
-	count++;
-	CURRENT_NUMBER.innerHTML = count;
-}
+    const changeColor = () => {
+        if (currentNumberWrapper.innerText < 0) {
+            currentNumberWrapper.style.color = '#00008B'
+        } else {
+            currentNumberWrapper.style.color = '#8B008B'
+        }
+    }
+    
+    const increment = () => {
+        currentNumber += 1
+        currentNumberWrapper.innerText = currentNumber
+    }
 
-function decrement() {
-	count--;
-	CURRENT_NUMBER.innerHTML = count;
-}
+    const decrement = () => {
+        currentNumber -= 1
+        currentNumberWrapper.innerText = currentNumber
+    }
 
-function test() {
-	kdowkdpo;
-}
+    btnAdicionar.addEventListener('click', () => {
+        if (currentNumber < 10) {
+            increment()
+            changeColor()
+        }
+    })
+
+    btnSubtrair.addEventListener('click', () => {
+        if (currentNumber > -10) {
+            decrement()
+            changeColor()
+        }
+    })
+})
