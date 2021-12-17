@@ -1,4 +1,4 @@
-## Desafio de contador da Digital Innovation One - DIO do curso Introdução ao Javascript.
+## Desafio de contador da Digital Innovation One - DIO - curso Introdução ao Javascript.
 A partir de um projeto de contador, foram propostos os seguintes desafios:
 - Implementar os eventos usando o método addEventListener;
 - Criar condicionais que desabilitam o botão de incrementar ou decrementar quando count chegar a um determinado valor (ex.: 0 <= count =< 10);
